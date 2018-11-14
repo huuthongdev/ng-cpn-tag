@@ -15,6 +15,7 @@ export class CpnTagComponent implements OnInit {
   }
 
   addTag(value: string) {
+    if (!value) return;
     const checkExistedIndex = this.tagArr.findIndex(v => v === value);
     if (checkExistedIndex !== -1) {
       this.existedErrorIndex = checkExistedIndex;
