@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+// ============================ CPN TAG STYLE ================================
+.cpn-tag {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ADACAD;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    .item {
+        padding: 0px 20px;
+        padding-right: 0px;
+        display: inline-block;
+        height: 30px;
+        line-height: 28px;
+        font-weight: 500;
+        color: #3B4E32;
+        background: rgba($color: #ADACAD, $alpha: 0.2);
+        border-radius: 500px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+
+        .remove {
+            cursor: pointer;
+            padding: 0px 10px;
+            height: 100%;
+            display: inline-block;
+
+            svg {
+                height: 14px;
+                transform: translateY(3px);
+            }
+        }
+
+        &.existed {
+            transition: 0.3s;
+            background: rgba($color: #FF5029, $alpha: 0.2);
+            animation: existedAnimation 0.5s ease-in-out forwards;
+            @keyframes existedAnimation {
+                0% { transform: scale(1); }            
+                50% { transform: scale(1.2) }            
+                100% { transform: scale(1); }            
+            }
+        }
+    }
+
+    input {
+        font-size: 1rem;
+        height: 30px;
+        line-height: 30px;
+        background: none;
+        padding: 0px 10px;
+    }
+}
+// ============================ End CPN TAG STYLE ============================
+
